@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* mixin */
+@import "var";
+
+@mixin b($b:0) {
+  bottom: $b;
+}
+@mixin bg($bg...) {
+  background: $bg;
+}
+@mixin bdr($bdr...) {
+  border-radius: $bdr;
+}
+@mixin c($c:#000) {
+  color: $c;
+}
+@mixin cl($cl:both) {
+  clear: $cl;
+}
+@mixin d($d:none) {
+  display: $d;
+}
+@mixin df($dfj:flex-start, $dfa:center) {
+  display: flex;
+  justify-content: $dfj;
+  align-items: $dfa;
+}
+@mixin f($f:left) {
+  float: $f;
+}
+@mixin ft($ft:.12rem) {
+  font-size: $ft;
+}
+@mixin h($h:100%) {
+  height: $h;
+}
+@mixin l($l:0) {
+  left: $l;
+}
+@mixin m($m...) {
+  margin: $m;
+}
+@mixin mt($mt:10px) {
+  margin-top: $mt;
+}
+@mixin ml($ml:10px) {
+  margin-left: $ml;
+}
+@mixin mb($mb:10px) {
+  margin-bottom: $mb;
+}
+@mixin mr($mr:10px) {
+  margin-right: $mr;
+}
+@mixin op($op) {
+  opacity: $op;
+}
+@mixin p($p...) {
+  padding: $p;
+}
+@mixin pt($pt:10px) {
+  padding-top: $pt;
+}
+@mixin pl($pl:10px) {
+  padding-left: $pl;
+}
+@mixin pb($pb:10px) {
+  padding-bottom: $pb;
+}
+@mixin pr($pr:10px) {
+  padding-right: $pr;
+}
+@mixin r($r:0) {
+  right: $r;
+}
+@mixin t($t:0) {
+  top: $t;
+}
+@mixin ta($ta:center) {
+  text-align: $ta;
+}
+@mixin td($td:underline) {
+  text-decoration: $td;
+}
+@mixin tt($tt:capitalize) {
+  text-transform: $tt;
+}
+@mixin w($w:100%) {
+  width: $w;
+}
+// line-height Vertical center 垂直居中
+@mixin lvc($lvc) {
+  height: $lvc;
+  line-height: $lvc;
+}
+// 居中
+@mixin psc($psc:absolute) {
+  position: $psc;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin wc($wc:1200px) {
+  width: $wc;
+  margin: 0 auto;
+}
+@mixin max-w($maxW:750px) {
+  max-width: $maxW;
+  margin: 0 auto;
+}
+// 布局
+@mixin fl($h: unset, $jc:center, $o:hidden, $min-w: 25%) {
+  display: flex;
+  justify-content: $jc;
+  align-items: center;
+  width: 100%;
+  height: $h;
+  line-height: $h;
+  overflow-y: hidden;
+  overflow-x: $o;
+  text-align: center;
+  > div, > li {
+    min-width: $min-w;
+  }
+}
+@mixin popup($bg:rgba(0,0,0,.4)) {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  background: $bg;
+  z-index: 1200;
+}
+@mixin btn($w, $h, $b:6px) {
+  width: $w;
+  height: $h;
+  line-height:$h;
+  text-align: center;
+  border-radius: $b;
+}
+
+// % 不能传参，但可使用变量，不引用不加载
+%psa {
+  position: absolute;
+  top: 0;
+}
+%psr {
+  position: relative;
+}
+%oh {
+  overflow: hidden;
+}
+%th {
+  overflow: hidden;
+  white-space: nowrap;
+}
+

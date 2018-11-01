@@ -1,0 +1,122 @@
+@charset "UTF-8";
+body{font-family: 'microsoft yahei','microsoft yahei ui','PingFangSC','helvetica neue','hiragino sans gb','arial','simsun','sans-serif';}
+/* 通过引入生成的底层的基础样式 */
+// 颜色统一用数字
+// a(align) an(animation) b(bottom) bg(background) bd(border) c(color) cl(clear) d(display) f(float) ft(font) h(height) l(left) m(margin)
+// o(overflow) op(opacity) ot(outline) p(padding) ps(position) r(right) t(text) ta(text-align) td(text-decoration) w(width) h(height)
+// mixin 给了默认值，不带参即使用默认值
+@import "mixins";
+.c0 { @include c }
+.c3 { @include c(#333) }
+.c3 { @include c(#333) }
+.c6 { @include c(#666) }
+.c9 { @include c(#999) }
+.c15 { @include c(#fff) }
+.c75 { @include c(#757575) }
+.cl { @include cl(left) }
+.cr { @include cl(right) }
+.cb { @include cl}
+.cp{cursor: pointer}
+.df { @include d(flex) }
+.db {display: block!important;}
+.di {display: inline!important;}
+.dib {display: inline-block!important;}
+.hide {visibility: hidden;}
+.fl { @include f}
+.fr { @include f(right) }
+.h { @include h}
+.oh { @extend %oh }
+.psr { @extend %psr}
+.psa { @extend %psa }
+.tal { @include ta(left) }
+.tac { @include ta }
+.tar { @include ta(right) }
+.tdm { @include td(line-through) } // m middle 中划线
+.tdb { @include td } // b bottom 下划线
+.ttc {@include tt} // 首字母大写
+.ttu {@include tt(uppercase)}
+.ttl {@include tt(lowercase)}
+.op6{opacity: .6}
+.fb{font-weight: bold;}
+.toh{ @extend %th; text-overflow: ellipsis; } // 溢出隐藏 ...
+.cf:after{content:""; height:0; line-height:0; display:block; visibility:hidden; clear:both; } // 清浮动
+.c-forbid{color: #ddd!important;}
+.btn-forbid{color: #fff!important;background: #ddd!important;}
+.c-danger{color: #f54c51!important;}
+.c-succ{color: #6acd94!important;}
+.c-primary{color: #4977d9!important;}
+.g-danger{color: #fff!important; background: linear-gradient(90deg, #fa767b 0%, #f54c51 100%);}
+.g-primary{color: #fff!important; background: linear-gradient(90deg, #719fe9 0%, #4977d9 100%);}
+.ml10{margin-left: 10px;}
+.ml5{margin-left: 5px;}
+.ml4{margin-left: 4px;}
+.mt2{margin-top: 2px;}
+.mb10{margin-bottom: 10px;}
+//.min-height{min-height: 420px}
+.h-initial {height: initial !important;}
+.in-block{
+  font-size: 0;
+  -webkit-text-size-adjust: none;
+}
+.btn{
+  margin: 15px;
+  width: 345px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #4977d9;
+}
+.ps-btm {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 8;
+}
+i.van-checkbox__icon{
+  font-size: 10px;
+  width: 15px;
+  height: 15px;
+  &:before{
+    position: relative;
+    top: -3px;
+    left: 1px;
+  }
+}
+i.van-checkbox--checked{
+  border-color: #4977d9;
+  background-color: #4977d9;
+}
+.warn i.van-checkbox--round{
+  border-color: #f54c51;
+  background-color: #f54c51;
+}
+i.van-checkbox--disabled{
+  color: #ddd;
+}
+div.van-dialog{
+  min-width: 70%;
+  width: initial;
+  max-width: 90%;
+  text-align: center;
+  border-radius: 10px;
+}
+button.van-dialog__confirm,
+button.van-dialog__confirm:active{
+  color: #4977d9;
+}
+div.van-picker__columns{
+  background: #edeeef;
+  margin-top: -44px;
+}
+div.van-dialog__message--has-title{
+  color: #333;
+}
+
+//弹窗遮罩透明色 度
+//div.van-modal{
+//  background-color: rgba(0,0,0,.5);
+//}
